@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Field Agri-Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            color: #333;
+            line-height: 1.6;
+            font-size: 18px;
+            background-image: url('https://plus.unsplash.com/premium_photo-1661962692059-55d5a4319814?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YWdyaWN1bHR1cmV8ZW58MHx8MHx8fDA%3D.jpg'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* Page structure */
+        header {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 80px 0;
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        header p {
+            font-size: 20px;
+            font-weight: 300;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+            margin: 20px 0;
+            border-radius: 15px;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+        }
+
+        .section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .section p {
+            font-size: 20px;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-button {
+            margin-top: 30px;
+            padding: 15px 30px;
+            font-size: 18px;
+            background: #feb47b;
+            color: white;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .cta-button:hover {
+            background: #ff7e5f;
+        }
+
+        /* Fancy hover effects for sections */
+        .section:hover {
+            transform: scale(1.02);
+            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            font-size: 16px;
+        }
+
+        footer a {
+            color: #feb47b;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 36px;
+            }
+
+            header p {
+                font-size: 18px;
+            }
+
+            .section h2 {
+                font-size: 28px;
+            }
+
+            .cta-button {
+                padding: 12px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Welcome to Next Field Agri-Solutions</h1>
+        <p>Innovative Agricultural Solutions for a Sustainable Future</p>
+    </header>
+
+    <!-- Mission Section -->
+    <div class="section" style="background: rgba(0, 0, 0, 0.6);">
+        <h2>Our Mission</h2>
+        <p>To deliver innovative agricultural solutions through technology, research, and consultancy, driving sustainability and efficiency in agriculture for a prosperous future.</p>
+        <button class="cta-button">Learn More About Our Mission</button>
+    </div>
+
+    <!-- Approach Section -->
+    <div class="section" style="background: rgba(0, 0, 0, 0.6);">
+        <h2>Our Approach</h2>
+        <p>We combine deep agricultural expertise with innovative technologies to drive sustainability and improve efficiency in farming practices.</p>
+        <button class="cta-button">Discover Our Methods</button>
+    </div>
+
+    <!-- Join Us Section -->
+    <div class="section" style="background: rgba(0, 0, 0, 0.6);">
+        <h2>Join Us</h2>
+        <p>Be a part of the agricultural revolution! Together, we can foster a sustainable future for farming.</p>
+        <button class="cta-button">Get Started</button>
+    </div>
+
+    
+
+
+
+
+
+
+
+
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+<style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #282828; /* Dark gray footer */
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        footer .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        footer .footer-container .logo {
+            flex: 1;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        footer .footer-container .logo img {
+            max-width: 200px; /* Adjust size */
+        }
+
+        footer .footer-container .quick-links,
+        footer .footer-container .address,
+        footer .footer-container .contact-info {
+            flex: 1;
+            margin-bottom: 20px;
+        }
+
+        footer .footer-container .quick-links a,
+        footer .footer-container .contact-info a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: block;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        footer .footer-container .quick-links a:hover,
+        footer .footer-container .contact-info a:hover {
+            color: #feb47b; /* Accent color */
+        }
+
+        /* Social Icons Styling */
+        footer .footer-container .social-icons {
+            flex: 1;
+            display: flex;
+            justify-content: space-between; /* Two columns */
+            margin-top: 20px;
+            text-align: center;
+            flex-wrap: wrap;
+        }
+
+        footer .footer-container .social-icons div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        footer .footer-container .social-icons a {
+            color: white;
+            font-size: 24px;
+            margin: 10px 0;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            padding: 10px;
+            border-radius: 50%;
+            background-color: #444; /* Dark background for icons */
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        footer .footer-container .social-icons a:hover {
+            background-color: #feb47b; /* Accent color on hover */
+            transform: scale(1.1); /* Slight zoom on hover */
+        }
+
+        footer .footer-container .copyright {
+            font-size: 14px;
+            font-weight: 300;
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        footer .footer-container .copyright a {
+            color: #feb47b;
+            text-decoration: none;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            footer .footer-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            footer .footer-container .quick-links,
+            footer .footer-container .address,
+            footer .footer-container .contact-info {
+                flex: 1;
+                margin-bottom: 20px;
+            }
+
+            footer .footer-container .social-icons {
+                flex-direction: column;
+                margin-top: 20px;
+            }
+
+            footer .footer-container .social-icons div {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <!-- Logo Section -->
+            <div class="logo">
+                <img src="https://i.imgur.com/c4EDFqp.png" alt="Company Logo"> <!-- Replace with your logo URL -->
+            </div>
+
+            <!-- Quick Links Section -->
+            <div class="quick-links">
+                <h3>Quick Links</h3>
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+
+            <!-- Address Section -->
+            <div class="address">
+                <h3>Our Address</h3>
+                <p>Next Field Agri-Solutions</p>
+                <p>NR2 Street</p>
+                <p>Musanze, Northern province, Rwanda</p>
+            </div>
+
+            <!-- Contact Information Section -->
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <a href="tel:+250-788-370558">Phone: +250-788-370558</a>
+                <a href="mailto:nextfieldagrisolutions@gmail.com">Email: nextfieldagrisolutions@gmail.com</a>
+
+
+            </div>
+
+
+<!-- Social Media Icons Section (Below Contact Us) -->
+<div>
+<h3>Follow Us</h3>
+		<div class="social-icons">
+		
+
+              <!-- First column of social media icons -->
+
+                <div>
+                    <a href="#" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" target="_blank" title="X"><i class="fab fa-X"></i></a>
+                </div>
+
+
+
+                <!-- Second column of social media icons -->
+                <div>
+                    <a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+<!-- Copyright Section -->
+        <div class="copyright">
+            <p>© 2025 Next Field Agri-Solutions. All rights reserved. | <a href="#">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <!-- Font Awesome Icons (for social media) -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
