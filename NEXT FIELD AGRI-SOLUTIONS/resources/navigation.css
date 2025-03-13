@@ -1,0 +1,223 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Menu */
+.menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    position: relative;
+    margin: 0 15px;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.menu .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background-color: #333;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.menu .dropdown-menu li {
+    margin: 5px 0;
+}
+
+.menu .dropdown-menu a {
+    color: #fff;
+    font-size: 14px;
+}
+
+/* Dropdown Hover */
+.menu .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Search Icon */
+.search-icon {
+    font-size: 18px;
+}
+
+
+
+/* Basic styles for the dropdown button */
+.dropdown-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  /* Dropdown container */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown content (initially hidden) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  /* Style for links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change background on hover */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Show the dropdown content when hovering over the button */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Change the color of the dropdown button when hovering */
+  .dropdown:hover .dropdown-btn {
+    background-color: #45a049;
+  }
+  
+
+/* Basic styles for the dropdown button */
+.dropdown-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+}
+
+/* Create a down arrow using the ::after pseudo-element */
+.dropdown-btn::after {
+    content: '▼';  /* This is the down arrow */
+    font-size: 14px;
+    margin-left: 10px;
+    position: absolute;
+    right: 10px;  /* Position it to the right end of the button */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown content (initially hidden) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Style for links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change background on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown content with transition effect */
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Change the color of the dropdown button when hovering */
+.dropdown:hover .dropdown-btn {
+    background-color: #45a049;
+}
+
+
+
+
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 36px;
+    }
+    header p {
+        font-size: 18px;
+    }
+    .section h2 {
+        font-size: 28px;
+    }
+    .cta-button {
+        padding: 12px 25px;
+    }
+}

@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get in Touch  - NEXT Field Agri-Solutions</title>
+    <style>
+            
+         
+         
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #333;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        /* Footer */
+        footer {
+            background-color: #021d39;
+            color: #D3D3D3;
+            text-align: center;
+            justify-items: center;
+            padding: 20px 0;
+        }
+        footer p {
+            font-size: 16px;
+        }
+        footer a {
+            color: #feb47b;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 36px;
+            }
+            header p {
+                font-size: 18px;
+            }
+            .section h2 {
+                font-size: 28px;
+            }
+            .cta-button {
+                padding: 12px 25px;
+            }
+        }
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .contact-info div {
+            flex: 1;
+            min-width: 280px;
+            background: #7dce88;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+        .contact-info h3 {
+            margin-top: 0;
+            color:#2e8b57;
+            font-size: 1.6em;
+        }
+        .contact-info p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+        .contact-form {
+            margin-top: 20px;
+        }
+        .contact-form h3 {
+            font-size: 2em;
+            color: #2e8b57;
+            margin-bottom: 20px;
+        }
+        .contact-form label {
+            display: inline-block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1em;
+            background: #f9f9f9;
+        }
+        .contact-form button {
+            background-color: #2e8b57;
+            color: #fff;
+            border: none;
+            padding: 14px 30px;
+            border-radius: 8px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .contact-form button:hover {
+            background-color: #276746;
+        }
+        .map {
+            margin-top: 40px;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+        }
+        .testimonials {
+            margin-top: 50px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .testimonials h3 {
+            font-size: 2em;
+            color: #2e8b57;
+            margin-bottom: 20px;
+        }
+        .testimonials p {
+            font-size: 1.2em;
+            font-style: italic;
+            color: #555;
+            line-height: 1.8;
+        }   
+
+
+
+
+
+
+
+
+        
+        /* Footer styling */
+        footer .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: auto;
+        }
+        footer .footer-container .logo {
+            flex: 1;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        footer .footer-container .logo img {
+            max-width: 200px;
+            height: 200px /* Adjust size */
+        }
+        footer .footer-container .quick-links,
+        footer .footer-container .address,
+        footer .footer-container .contact-info,
+        footer .footer-container .social-media {
+            flex: 1;
+            margin margin-top: 20px;
+            margin-bottom: auto;
+        }
+        footer .footer-container .quick-links a,
+        footer .footer-container .contact-info a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: block;
+          
+            margin-top: 2opx;
+            margin-bottom: auto;
+            font-size: 16px;
+        }
+        footer .footer-container .quick-links a:hover,
+        footer .footer-container .contact-info a:hover {
+            color: #feb47b; /* Accent color */
+        }
+        /* Social Icons Styling */
+        footer .footer-container .social-media img {
+            width: 30px;
+            height: 30px;
+            margin: 10px;
+            transition: transform 0.3s ease;
+        }
+        footer .footer-container .social-media img:hover {
+            transform: scale(1.2); /* Slight zoom on hover */
+        }
+        footer .footer-container .copyright {
+            font-size: 14px;
+            font-weight: 300;
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+        }
+        footer .footer-container .copyright a {
+            color: #feb47b;
+            text-decoration: none;
+        }
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            footer .footer-container {
+                flex-direction: column;
+                text-align: center;
+                flex-wrap: wrap;
+                width: 100%;
+            }
+            footer .footer-container .quick-links,
+            footer .footer-container .address,
+            footer .footer-container .contact-info,
+            footer .footer-container .social-media {
+                flex: 1;
+                margin-bottom: 20px;
+            }
+        } 
+
+    </style>
+</head>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center; /* Center-aligns the content horizontally */
+            align-items: center;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .logo span {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* Menu links styling */
+        .menu > div {
+            margin: 0 15px;
+        }
+
+        .menu a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .menu a:hover {
+            color: #feb47b; /* Accent color on hover */
+        }
+
+        /* Dropdown menu styling */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-btn {
+            background-color: transparent;
+            color: white;
+            padding: 14px 30px 14px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            position: relative;
+            width: auto;
+        }
+
+        .dropdown-btn::after {
+            content: '▼';
+            font-size: 14px;
+            margin-left: 10px;
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .dropdown-btn:hover {
+            color: #feb47b;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #444;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Search container styling */
+        .search-container {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+        }
+
+        .search-input {
+            padding: 8px 12px;
+            border-radius: 20px 0 0 20px;
+            border: 1px solid #ddd;
+            outline: none;
+            font-size: 16px;
+        }
+
+        .search-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 2px 5px;
+            border-radius: 0 20px 20px 0;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .search-btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .menu {
+                display: none; /* Hide menu by default on small screens */
+                flex-direction: column;
+                align-items: flex-start;
+                width: 100%;
+                background-color: #333;
+                position: absolute;
+                top: 60px; /* Adjust based on navbar height */
+                left: 0;
+                padding: 10px;
+            }
+
+            .menu.active {
+                display: flex; /* Show menu when active */
+            }
+
+            .menu > div {
+                margin: 10px 0;
+            }
+
+            .navbar .menu-btn {
+                display: block;
+                cursor: pointer;
+                color: #fff;
+                font-size: 30px;
+            }
+        }
+
+        
+        /* Default styling for the hamburger menu button */
+.menu-btn {
+    display: none; /* Hide on larger screens */
+}
+
+.hamburger {
+    display: block;
+    background-color: #fff;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+
+    </style>
+</head>
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body>
+
+
+ <!-- Hamburger Menu Icon for small screens -->
+    <nav class="navbar">
+        
+    
+        <!-- Hamburger Menu Icon for small screens -->
+        <div class="menu-btn" onclick="toggleMenu()">
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
+        </div>
+
+        <script>
+            function toggleMenu() {
+                document.querySelector('.menu').classList.toggle('active');
+            }
+        </script>
+        
+    </nav>
+
+
+
+
+
+    <nav class="navbar">
+
+ 
+        <div class="menu">
+         <div class="logo">
+                  <a href="index.html"><img src="/images/logo white.jpg" alt="NEXT Field "> </a>
+            <span>NEXT Field Agri-Solutions</span>
+          </div>
+        
+        
+            <div><a href="/home/index.html">Home</a></div>
+            
+            <div class="dropdown">
+                <button class="dropdown-btn">What We Are Doing</button>
+                <div class="dropdown-content">
+                    <a href="#">Lease and Area Management</a>
+                    <a href="#">NEXT Field Connect Mobile App</a>
+                </div>
+            </div>
+      
+      
+            <div class="dropdown">
+                <button class="dropdown-btn">About Us</button>
+                <div class="dropdown-content">
+                    <a href="#">Our Mission</a>
+                    <a href="#">Our Mission</a>
+                </div>
+            </div>
+      
+            <div><a href="#">Our Team</a></div>
+            <div><a href="#">Members Login</a></div>
+      
+            <div><a href="#">Latest News</a></div>
+            <div class="dropdown">
+                <button class="dropdown-btn">More</button>
+                <div class="dropdown-content">
+                    <a href="#">FAQ</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+      
+            
+            <div class="search-container">
+                <input type="text" placeholder="Search..." class="search-input">
+                <button type="submit" class="search-btn">Search</button>
+            </div>
+        </div>
+        
+      </nav>
+               
+
+
+ <header>
+    <h1>Get in Touch with NEXT Field Agri-Solutions</h1>
+ </header>
+
+ <div class="container">
+    <div class="contact-info">
+        <div>
+            <h3>Address</h3>
+            <p>NEXT Field Agri-Solutions<br>NR2 Street<br>Musanze, Northern Province, Rwanda</p>
+        </div>
+        <div>
+            <h3>Phone</h3>
+            <p>Customer Support: +250 788370558<br>Office Line: +250 729003587</p>
+        </div>
+        <div>
+            <h3>Email</h3>
+            <p>General Inquiries: <a href="mailto:nextfieldagrisolutions@gmail.com">nextfieldagrisolutions@gmail.com</a><br>Support: <a href="mailto:info@nextfield.work.gd">info@nextfield.work.gd</a></p>
+        </div>
+    </div>
+
+    <div class="contact-form">
+        <h3>Send Us a Message</h3>
+        <form action="#" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+            <label for="phone">Phone Number (optional)</label>
+            <input type="tel" id="phone" name="phone" placeholder="Your Phone Number">
+
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject" required>
+                <option value="">-- Select a Subject --</option>
+                <option value="general">General Inquiry</option>
+                <option value="partnership">Partnership</option>
+                <option value="investment">Investment</option>
+                <option value="consultancy">Consultancy</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="Your Message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <div class="map">
+        <h3>Find Us</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.95373511584487!3d-37.8172097427714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5777f579f04d965!2sMelbourne%20Central!5e0!3m2!1sen!2sau!4v1637242345678" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <div class="testimonials">
+        <h3>What Our Clients Say</h3>
+        <p>"NEXT Field Agri-Solutions has revolutionized our farming practices. Their expertise and technology are unparalleled."</p>
+        <p>"The team’s dedication and support have helped us achieve better yields and sustainability goals."</p>
+    </div>
+ </div>
+
+
+
+<footer>
+    <div class="footer-container">
+        <div class="logo">
+            <a href="index.html"><img src="/images/logo.png" alt="NEXT Field "> </a>
+        </div>
+        <div class="quick-links">
+            <h3>Quick Links</h3>
+            <a href="/home/index.html">Home</a>
+            <a href="/about us/OUR MISSION.HTML">About Us</a>
+            <a href="our services">Our Services</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="address">
+            <h3>Our Address</h3>
+            <p>Next Field Agri-Solutions</p>
+            <p>NR2 Street</p>
+            <p>Musanze, Northern province, Rwanda</p>
+        </div>
+        
+        <div class="social-media">
+            <h3>Follow Us</h3>
+            <a href="#" target="_blank" title="Facebook"><img src="/images/facebook-icon.png" alt="Facebook"></a>
+            <a href="#" target="_blank" title="Twitter"><img src="/images/x icon.jpg" alt="Twitter"></a>
+            <a href="#" target="_blank" title="LinkedIn"><img src="/images/Linkedin icon.webp" alt="LinkedIn"></a>
+            <a href="#" target="_blank" title="Instagram"><img src="/images/instagram icon.webp" alt="Instagram"></a>
+                        
+        </div>
+    </div>
+    <div class="copyright">
+        <p>© 2025 Next Field Agri-Solutions. All rights reserved. | <a href="#">Privacy Policy</a></p>
+    </div>
+</footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

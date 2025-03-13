@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Next Field Agri-Solutions</title>
+    <style>
+        /* Basic reset for MENU BAR */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center; /* Center-aligns the content horizontally */
+            align-items: center;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .logo span {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* Menu links styling */
+        .menu > div {
+            margin: 0 15px;
+        }
+
+        .menu a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .menu a:hover {
+            color: #feb47b; /* Accent color on hover */
+        }
+
+        /* Dropdown menu styling */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-btn {
+            background-color: transparent;
+            color: white;
+            padding: 14px 30px 14px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            position: relative;
+            width: auto;
+        }
+
+        .dropdown-btn::after {
+            content: '▼';
+            font-size: 14px;
+            margin-left: 10px;
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .dropdown-btn:hover {
+            color: #feb47b;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #444;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Search container styling */
+        .search-container {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+        }
+
+        .search-input {
+            padding: 8px 12px;
+            border-radius: 20px 0 0 20px;
+            border: 1px solid #ddd;
+            outline: none;
+            font-size: 16px;
+        }
+
+        .search-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 2px 5px;
+            border-radius: 0 20px 20px 0;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .search-btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .menu {
+                display: none; /* Hide menu by default on small screens */
+                flex-direction: column;
+                align-items: flex-start;
+                width: 100%;
+                background-color: #333;
+                position: absolute;
+                top: 60px; /* Adjust based on navbar height */
+                left: 0;
+                padding: 10px;
+            }
+
+            .menu.active {
+                display: flex; /* Show menu when active */
+            }
+
+            .menu > div {
+                margin: 10px 0;
+            }
+
+            .navbar .menu-btn {
+                display: block;
+                cursor: pointer;
+                color: #fff;
+                font-size: 30px;
+            }
+        }
+
+        
+        /* Default styling for the hamburger menu button */
+.menu-btn {
+    display: none; /* Hide on larger screens */
+}
+
+.hamburger {
+    display: block;
+    background-color: #fff;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+    </style>
+</head>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - NEXT Field Agri-Solutions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #333;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            padding: 20px;
+        }
+
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #333;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+         /* Footer */
+        footer {
+            background-color: #021d39;
+            color: #D3D3D3;
+            text-align: center;
+            justify-items: center;
+            padding: 20px 0;
+        }
+        footer p {
+            font-size: 16px;
+        }
+        footer a {
+            color: #feb47b;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 36px;
+            }
+            header p {
+                font-size: 18px;
+            }
+            .section h2 {
+                font-size: 28px;
+            }
+            .cta-button {
+                padding: 12px 25px;
+            }
+        }
+        /* Footer styling */
+        footer .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: auto;
+        }
+        footer .footer-container .logo {
+            flex: 1;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        footer .footer-container .logo img {
+            max: width 200px;
+            height: 200px /* Adjust size */
+        }
+        footer .footer-container .quick-links,
+        footer .footer-container .address,
+        footer .footer-container .contact-info,
+        footer .footer-container .social-media {
+            flex: 1;
+            margin margin-top: 20px;
+            margin-bottom: auto;
+        }
+    
+        footer .footer-container .quick-links a,
+        footer .footer-container .contact-info a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: block;
+          
+            margin-top: 2opx;
+            margin-bottom: auto;
+            font-size: 14px;
+        }
+        footer .footer-container .quick-links a:hover,
+        footer .footer-container .contact-info a:hover {
+            color: #feb47b; /* Accent color */
+        }
+        /* Social Icons Styling */
+        footer .footer-container .social-media img {
+            width: 30px;
+            height: 30px;
+            margin: 10px;
+            transition: transform 0.3s ease;
+        }
+        footer .footer-container .social-media img:hover {
+            transform: scale(1.2); /* Slight zoom on hover */
+        }
+        footer .footer-container .copyright {
+            font-size: 14px;
+            font-weight: 300;
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+        }
+        footer .footer-container .copyright a {
+            color: #feb47b;
+            text-decoration: none;
+        }
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            footer .footer-container {
+                flex-direction: column;
+                text-align: center;
+                flex-wrap: wrap;
+                width: 100%;
+            }
+            footer .footer-container .quick-links,
+            footer .footer-container .address,
+            footer .footer-container .contact-info,
+            footer .footer-container .social-media {
+                flex: 1;
+                margin-bottom: 20px;
+            }
+        }
+
+                
+    </style>
+</head>
+
+
+
+
+
+<body>
+
+
+    <!-- Hamburger Menu Icon for small screens -->
+       <nav class="navbar">
+           
+       
+           <!-- Hamburger Menu Icon for small screens -->
+           <div class="menu-btn" onclick="toggleMenu()">
+               <div class="hamburger"></div>
+               <div class="hamburger"></div>
+               <div class="hamburger"></div>
+           </div>
+   
+           <script>
+               function toggleMenu() {
+                   document.querySelector('.menu').classList.toggle('active');
+               }
+           </script>
+           
+       </nav>
+   
+   
+   
+   
+   
+       <nav class="navbar">
+   
+    
+           <div class="menu">
+            <div class="logo">
+                     <a href="index.html"><img src="/images/logo white.jpg" alt="NEXT Field "> </a>
+               <span>NEXT Field Agri-Solutions</span>
+             </div>
+           
+           
+               <div><a href="/home/index.html">Home</a></div>
+               
+               <div class="dropdown">
+                   <button class="dropdown-btn">What We Are Doing</button>
+                   <div class="dropdown-content">
+                       <a href="#">Lease and Area Management</a>
+                       <a href="#">NEXT Field Connect Mobile App</a>
+                   </div>
+               </div>
+         
+         
+               <div class="dropdown">
+                   <button class="dropdown-btn">About Us</button>
+                   <div class="dropdown-content">
+                       <a href="#">Our Mission</a>
+                       <a href="#">Our Mission</a>
+                   </div>
+               </div>
+         
+               <div><a href="#">Our Team</a></div>
+               <div><a href="#">Members Login</a></div>
+         
+               <div><a href="#">Latest News</a></div>
+               <div class="dropdown">
+                   <button class="dropdown-btn">More</button>
+                   <div class="dropdown-content">
+                       <a href="#">FAQ</a>
+                       <a href="#">Contact Us</a>
+                   </div>
+               </div>
+         
+               
+               <div class="search-container">
+                   <input type="text" placeholder="Search..." class="search-input">
+                   <button type="submit" class="search-btn">Search</button>
+               </div>
+           </div>
+           
+         </nav>
+                 
+
+
+
+
+    <header>
+        <h1>Welcome to NEXT Field Agri-Solutions</h1>
+        
+    </header>
+
+    
+   
+    <div class="container">
+        <div class="section">
+            <h2>Introduction</h2>
+            <p>Our mission is to revolutionize agriculture through innovation, sustainability, and efficiency. We believe in harnessing the power of technology and research to create a prosperous future for farmers and communities worldwide.</p>
+        </div>
+        <div class="section">
+            <h2>Innovative Solutions</h2>
+            <p>We are committed to developing cutting-edge technologies that enhance agricultural productivity and sustainability. Our solutions include precision farming, advanced analytics, and smart irrigation systems that optimize resources and increase yields.</p>
+        </div>
+        <div class="section">
+            <h2>Research and Development</h2>
+            <p>Our dedicated research team is constantly exploring new methods and technologies to improve agricultural practices. We collaborate with leading universities and research institutions to ensure our solutions are at the forefront of innovation.</p>
+        </div>
+        <div class="section">
+            <h2>Consultancy Services</h2>
+            <p>We offer expert consultancy services to help farmers and agricultural businesses implement sustainable practices. Our team of experienced consultants provides tailored advice and support to meet the unique needs of each client.</p>
+        </div>
+        <div class="section">
+            <h2>Sustainability and Efficiency</h2>
+            <p>Sustainability is at the core of our mission. We strive to minimize environmental impact through efficient resource management and eco-friendly practices. Our goal is to create a balance between productivity and environmental stewardship.</p>
+        </div>
+        <div class="section">
+            <h2>Community Engagement</h2>
+            <p>We believe in empowering communities by providing education and resources to support sustainable agriculture. Our community programs focus on training, knowledge sharing, and fostering collaboration among farmers and stakeholders.</p>
+        </div>
+        <div class="section">
+            <h2>Future Vision</h2>
+            <p>Looking ahead, we aim to expand our reach and impact, helping more farmers and communities to thrive. We are committed to continuous improvement and innovation, driving the agricultural industry towards a brighter and more sustainable future.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+          <!-- Logo Section -->
+          <div class="logo">
+              <a href="index.html"><img src="/images/logo.png" alt="NEXT Field "> </a><!-- Replace with your logo URL -->
+          </div>
+          <!-- Quick Links Section -->
+          <div class="quick-links">
+              <h3>Quick Links</h3>
+              <a href="/home/index.html">Home</a>
+              <a href="/about us/OUR MISSION.HTML">About Us</a>
+              <a href="our services">Our Services</a>
+              <a href="#">Contact Us</a>
+              
+          </div>
+          <!-- Address Section -->
+          <div class="address">
+              <h3>Our Address</h3>
+              <p>Next Field Agri-Solutions</p>
+              <p>NR2 Street</p>
+              <p>Musanze, Northern province, Rwanda</p>
+          </div>
+          <!-- Contact Information Section -->
+          <div class="contact-info">
+              <h3>Contact Us</h3>
+              <a href="tel:+250-788-370558">Phone: +250-788-370558</a>
+              <a href="https://wa.me/250788370558?">WhatsApp: +250-788-370558</a>
+              <a href="mailto:nextfieldagrisolutions@gmail.com">Email: nextfieldagrisolutions@gmail.com</a>
+          </div>
+          <!-- Social Media Icons Section -->
+          <div class="social-media">
+            <h3>Follow Us</h3>
+            <a href="#" target="_blank" title="Facebook"><img src="/images/facebook-icon.png" alt="Facebook"></a>
+            <a href="#" target="_blank" title="Twitter"><img src="/images/x icon.jpg" alt="Twitter"></a>
+            <a href="#" target="_blank" title="LinkedIn"><img src="/images/Linkedin icon.webp" alt="LinkedIn"></a>
+            <a href="#" target="_blank" title="Instagram"><img src="/images/instagram icon.webp" alt="Instagram"></a>
+        </div>
+      </div>
+      <!-- Copyright Section -->
+      <div class="copyright">
+          <p>© 2025 Next Field Agri-Solutions. All rights reserved. | <a href="#">Privacy Policy</a></p>
+      </div>
+  </footer>
+   
+     
+</body>
+</html>
