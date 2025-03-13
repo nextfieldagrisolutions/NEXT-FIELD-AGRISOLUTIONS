@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu with Sub-Menu</title>
+  <style>
+    /* Main menu styling */
+    .menu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      background-color: #333; /* Background for the menu */
+    }
+
+    .menu ul li {
+      position: relative; /* For positioning the sub-menu */
+    }
+
+    .menu ul li a {
+      text-decoration: none;
+      color: white;
+      padding: 10px 20px;
+      display: block;
+      transition: background-color 0.3s;
+    }
+
+    .menu ul li a:hover {
+      background-color: #555; /* Highlight on hover */
+    }
+
+    /* Sub-menu styling */
+    .menu ul .sub-menu {
+      display: none; /* Hide the sub-menu by default */
+      position: absolute;
+      top: 100%; /* Position it below the parent menu item */
+      left: 0;
+      background-color: #444; /* Background for the sub-menu */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu ul .sub-menu li {
+      width: 200px; /* Set a fixed width for the sub-menu */
+    }
+
+    .menu ul .sub-menu li a {
+      padding: 10px;
+      color: white;
+    }
+
+    .menu ul .sub-menu li a:hover {
+      background-color: #666; /* Highlight on hover in the sub-menu */
+    }
+
+    /* Show the sub-menu on hover */
+    .menu ul li:hover .sub-menu {
+      display: block;
+    }
+  </style>
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body>
+  <nav class="menu">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li>
+        <a href="#">Services &#9662;</a>
+        <!-- Sub-menu -->
+        <ul class="sub-menu">
+          <li><a href="#">Web Development</a></li>
+          <li><a href="#">Graphic Design</a></li>
+          <li><a href="#">SEO</a></li>
+        </ul>
+      </li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Next Field Connect Mobile App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background-color: #f4f4f9;
+    }
+
+    header {
+      background: #4CAF50;
+      color: white;
+      padding: 20px 10px;
+      text-align: center;
+      background-image: url('header-bg.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .menu {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #333;
+      color: white;
+      padding: 10px 0;
+      z-index: 1000;
+    }
+
+    .menu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .menu ul li {
+      margin: 0 15px;
+    }
+
+    .menu ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .menu ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 80px auto 20px;
+      padding: 20px;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      color: #4CAF50;
+      border-bottom: 2px solid #4CAF50;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    .key-features, .benefits {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .feature, .benefit {
+      flex: 1 1 calc(50% - 20px);
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature h3, .benefit h3 {
+      font-size: 1.5rem;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .feature p, .benefit p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .feature img, .benefit img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .user-experience, .screenshots {
+      text-align: center;
+    }
+
+    .user-experience p, .screenshots p {
+      font-size: 1rem;
+      color: #555;
+      margin: 20px 0;
+    }
+
+    .screenshots img {
+      max-width: 100%;
+      height: auto;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 40px;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .feature, .benefit {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="menu">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#benefits">Benefits</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#screenshots">Screenshots</a></li>
+    </ul>
+  </div>
+
+  <header>
+    <h1>Next Field Connect Mobile App</h1>
+  </header>
+
+  <div class="container">
+    <section id="about" class="section">
+      <h2>About the App</h2>
+      <p>Our mobile app is a comprehensive tool designed to revolutionize the agricultural sector by connecting farmers, investors, and stakeholders with cutting-edge information. The app empowers users with real-time data on climate conditions, insights into crop varieties, and access to professional consultations, enabling them to make smarter decisions for higher productivity and sustainability.</p>
+      <img src="about-app.jpg" alt="About the App" style="width:100%; height:auto; border-radius:8px; margin-top:20px;">
+    </section>
+
+    <section id="features" class="section">
+      <h2>Key Features</h2>
+      <div class="key-features">
+        <div class="feature">
+          <img src="climate-data.jpg" alt="Real-Time Climate Data">
+          <h3>Real-Time Climate Data</h3>
+          <p>Stay informed with instant weather updates, rainfall predictions, and temperature trends. Plan your agricultural activities with confidence, minimizing risks caused by unexpected weather changes.</p>
+        </div>
+        <div class="feature">
+          <img src="crop-variety.jpg" alt="Crop Variety Insights">
+          <h3>Crop Variety Insights</h3>
+          <p>Explore detailed profiles of crop varieties, including their growth requirements, yield potential, and resistance to pests. Match crops to your region's climate and soil conditions for optimized farming.</p>
+        </div>
+        <div class="feature">
+          <img src="expert-consultations.jpg" alt="Expert Consultations">
+          <h3>Expert Consultations</h3>
+          <p>Connect with seasoned agricultural experts for tailored advice on crop management, soil health, and pest control. Receive actionable insights to overcome challenges in your farming practices.</p>
+        </div>
+        <div class="feature">
+          <img src="interactive-dashboards.jpg" alt="Interactive Dashboards">
+          <h3>Interactive Dashboards</h3>
+          <p>Visualize critical data trends, production forecasts, and regional statistics through intuitive dashboards. Gain a comprehensive understanding of the factors influencing your agricultural decisions.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="benefits" class="section">
+      <h2>Benefits</h2>
+      <div class="benefits">
+        <div class="benefit">
+          <img src="efficiency.jpg" alt="Efficiency and Time Savings">
+          <h3>Efficiency and Time Savings</h3>
+          <p>Eliminate the guesswork in farming by accessing data-driven insights. Save time on research and focus on strategic planning with our easy-to-use app features.</p>
+        </div>
+        <div class="benefit">
+          <img src="productivity.jpg" alt="Improved Productivity">
+          <h3>Improved Productivity</h3>
+          <p>Boost your yield potential with precise planning and effective resource utilization. Optimize irrigation, fertilization, and planting schedules for maximum profitability.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section user-experience">
+      <h2>User Experience</h2>
+      <p>The app is designed with simplicity and accessibility in mind. From farmers in rural areas to investors in urban settings, the intuitive layout and clear navigation ensure that everyone can use the app efficiently. Features like voice commands and offline mode further enhance usability.</p>
+      <img src="user-experience.jpg" alt="User Experience" style="width:100%; height:auto; border-radius:8px; margin-top:20px;">
+    </section>
+
+    <section id="screenshots" class="section screenshots">
+      <h2>Screenshots / Demo</h2>
+      <p>Explore our app's interface and functionality through these screenshots:</p>
+      <img src="screenshot1.jpg" alt="App Screenshot 1">
+      <img src="screenshot2.jpg" alt="App Screenshot 2">
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 NEXT Field Agri-Solutions. All rights reserved.</p>
+  </footer>
+</body>
+</html>
