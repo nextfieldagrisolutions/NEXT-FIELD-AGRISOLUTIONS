@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXT Field Connect</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #333;
+      
+      background: linear-gradient(135deg, #E3F2FD, #BBDEFB); /* Light blue to soft blue */
+
+    }
+    header {
+    
+      background-image: url(https://t4.ftcdn.net/jpg/02/76/08/07/240_F_276080724_hltnCyDjcqAyRtLzDYo3T2jXbBtCD7fl.jpg);
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(217, 15, 15, 0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      animation: fadeIn 2s ease-in-out;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin: 0.5rem 0 0;
+      animation: fadeIn 2.5s ease-in-out;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url(https://t4.ftcdn.net/jpg/02/76/08/07/240_F_276080724_hltnCyDjcqAyRtLzDYo3T2jXbBtCD7fl.jpg);
+      background: linear-gradient(90deg, #141b55, #1b606c); /* Green to Gold */
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1.5rem;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #4CAF50;
+    }
+    .search-bar {
+      display: flex;
+      align-items: center;
+      background: white;
+      border-radius: 25px;
+      padding: 0.5rem 1rem;
+      margin-left: auto;
+    }
+    .search-bar input {
+      border: none;
+      outline: none;
+      font-size: 1rem;
+      width: 200px;
+    }
+    .search-bar button {
+      background: none;
+      border: none;
+      color: #131260;
+      cursor: pointer;
+      font-size: 1.2rem;
+    }
+    .hero {
+      background: url('https://www.minagri.gov.rw/index.php?eID=dumpFile&t=p&p=308222&token=c321d89c0ad19b2c092e95e6dfc38d40866aa291') no-repeat center center/cover;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+    .hero p {
+      font-size: 1.5rem;
+      margin: 1rem 0 0;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+    .section {
+      margin-bottom: 3rem;
+      padding: 2rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease forwards;
+    }
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .section h2 {
+      color: #4CAF50;
+      border-bottom: 2px solid #4CAF50;
+      padding-bottom: 0.5rem;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      background: linear-gradient(135deg, #4CAF50, #45a049);
+      color: white;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      border-radius: 25px;
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 6px rgba(218, 113, 15, 0.1);
+    }
+    .cta-button i {
+      margin-right: 0.5rem;
+    }
+    .cta-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    }
+    footer {
+    background: linear-gradient(90deg, #141b55, #1b606c); /* Green to Gold */
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 0;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+    .footer a {
+      color: #4CAF50;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .footer a:hover {
+      color: #45a049;
+    }
+    .social-icons {
+      margin: 1rem 0;
+    }
+    .social-icons a {
+      color: white;
+      margin: 0 0.5rem;
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+    }
+    .social-icons a:hover {
+      color: #4CAF50;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    ul li, ol li {
+      margin-bottom: 0.75rem;
+    }
+    blockquote {
+      background: #f9f9f9;
+      border-left: 5px solid #4CAF50;
+      margin: 1.5rem 0;
+      padding: 1rem;
+      font-style: italic;
+      color: #555;
+    }
+    .image-container {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .image-container img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  
+  <nav>
+    <a href="#welcome">Home</a>
+    <a href="#why">Why NEXT Field Connect?</a>
+    <a href="#how">How It Works</a>
+    <a href="#features">Key Features</a>
+    <a href="#visionary">Who Is Behind ?</a>
+    <a href="#start">Get Started</a>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search...">
+      <button onclick="searchPage()"><i class="fas fa-search"></i></button>
+    </div>
+  </nav>
+  <div class="hero">
+    <div>
+      <h1>NEXT FIELD CONNECT</h1>
+      <p>Empowering Stakeholders Via Instant Access to Agricultural Value Chain Information</p>
+    </div>
+  </div>
+  <div class="container">
+    <!-- Welcome Section -->
+    <section id="welcome" class="section">
+      <h2>Welcome to NEXT Field Connect</h2>
+      <p>Agriculture is evolving, and farmers need real-time information to stay ahead. With NEXT Field Connect, you can access market prices, climate forecasts, seed availability, and expert advice instantly—right from WhatsApp!</p>
+      <ul>
+        <li>No app required—just send a message, and get instant responses.</li>
+        <li>Accurate market prices</li>
+        <li>Seasonal climate updates</li>
+        <li>Seed variety information</li>
+        <li>Expert connections for conservation agriculture</li>
+      </ul>
+      <p>Transform your farming with smart technology!</p>
+      <a href="https://wa.me/250794894144" class="cta-button"><i class="fas fa-rocket"></i> Get Started Now</a>
+      <div class="image-container">
+        <img src="https://img.freepik.com/premium-photo/utilizing-digital-platforms-remote-crop-monitoring-inform-strategic-farming-decisions_1131585-4008.jpg" alt="Farmers using technology">
+      </div>
+    </section>
+
+    <!-- Why NEXT Field Connect Section -->
+    <section id="why" class="section">
+      <h2>Why NEXT Field Connect?</h2>
+      <ul>
+        <li>Farmers struggle with limited access to reliable agricultural data.</li>
+        <li>Unstable market prices make it hard to sell at the right time.</li>
+        <li>Changing climate conditions demand better planning.</li>
+        <li>High-quality seeds and expert guidance are not always accessible.</li>
+      </ul>
+      <p>NEXT Field Connect solves all these problems by delivering instant, AI-powered agricultural insights at your fingertips.</p>
+      <div class="image-container">
+        <img src="https://www.cimmyt.org/content/uploads/2019/02/CASI-demo-field-by-Total-Land-care-in-Angonia.jpg" alt="Farmer in field">
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how" class="section">
+      <h2>How NEXT Field Connect Works</h2>
+      <ol>
+        <li>Send a question on WhatsApp, e.g., "What is the price of maize today?"</li>
+        <li>Our AI system retrieves real-time data from a trusted agricultural database.</li>
+        <li>You get an instant response, e.g., "Maize is selling at 400 Rwf/kg in Musanze District."</li>
+        <li>Continue asking about seeds, climate, or expert advice.</li>
+      </ol>
+      <p>No complex apps—just WhatsApp!</p>
+      <div class="image-container">
+        <img src="https://www.lifewire.com/thmb/2VQS0uHmU00A-64kQT1pqL950KA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-2183307378-eb7a85ea4c2f493da5ed567ce4cf892b.jpg" alt="WhatsApp chat example">
+      </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section id="features" class="section">
+      <h2>Key Features</h2>
+      <ul>
+        <li>Market Prices – Get real-time prices for crops, livestock, and farm inputs.</li>
+        <li>Climate Data – Plan your season with accurate weather forecasts.</li>
+        <li>Improved Seed Access – Find high-quality, disease-resistant varieties.</li>
+        <li>Expert Advice – Connect with specialists in conservation agriculture.</li>
+      </ul>
+      <div class="image-container">
+        <img src="https://www.povertyactionlab.org/sites/default/files/styles/large/public/images/2024/12/shutterstock_2246506733_editorial-use-only_Elen-Marlen.jpg?itok=WqNnavRk" alt="Market prices">
+      </div>
+    </section>
+
+    <!-- Visionary Section -->
+    <section id="visionary" class="section">
+      <h2>Honoring the Visionary Behind NEXT Field Connect</h2>
+      <p>Aphrodice Niyodusenga – Founder and Developer</p>
+      <p>NEXT Field Connect is the vision of Aphrodice Niyodusenga, a dedicated entrepreneur, agricultural technologist, and digital solutions expert.</p>
+      <ul>
+        <li>Passionate about agriculture, AI, and digital transformation.</li>
+        <li>Committed to empowering farmers with real-time information.</li>
+        <li>Focused on bridging the gap between traditional farming and smart technology.</li>
+      </ul>
+      <blockquote>
+        "Agriculture is about more than growing crops—it's about growing economies and transforming lives. NEXT Field Connect is here to make that happen."
+        <br>— Aphrodice Niyodusenga
+      </blockquote>
+      <p>Be part of the agricultural revolution today!</p>
+      <p>Find Us Online: <a href="http://www.nextfieldconnect.publicvm.com" target="_blank">www.nextfieldconnect.publicvm.com</a></p>
+      <p>Email Us: <a href="mailto:nextfieldagrisolutions@gmail.com">nextfieldagrisolutions@gmail.com</a></p>
+      <div class="image-container">
+        <img src="/aphro.jpg" alt="Aphrodice Niyodusenga">
+      </div>
+    </section>
+
+    <!-- Get Started Section -->
+    <section id="start" class="section">
+      <h2>Get Started with NEXT Field Connect!</h2>
+      <p>Ready to transform your farming with instant agricultural insights?</p>
+      <a href="https://wa.me/250794894144" class="cta-button"><i class="fab fa-whatsapp"></i> Get Started Via WhatsApp!</a>
+      
+      <ul>
+        <li>No app installation needed!</li>
+        <li>100% free to use for farmers!</li>
+        <li>Instant responses, 24/7 support!</li>
+      </ul>
+      <div class="image-container">
+        <img src="farmer.jpg" alt="Farmer using phone">
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="social-icons">
+      <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+    <p>&copy; 2025 Next Field Agri-Solutions. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Add fade-in animation on scroll
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+
+    // Search functionality
+    function searchPage() {
+      const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+      const content = document.body.innerText.toLowerCase();
+      if (content.includes(searchTerm)) {
+        alert(`Found: ${searchTerm}`);
+      } else {
+        alert(`"${searchTerm}" not found.`);
+      }
+    }
+  </script>
+</body>
+</html>
